@@ -14,7 +14,7 @@
       .widget p {
         margin-top: 0;
         margin-bottom: 16px;
-        font-size: 48px;
+        font-size: 24px;
       }
 
       .widget span {
@@ -22,25 +22,46 @@
       }
 
       .widget button {
-        padding: 8px 12px;
-        font-size: 20px;
+        padding: 15px 20px;
+        font-size: 40px;
         cursor: pointer;
+        border-radius: 10px;
+        background-color: aquamarine;
+        border-color: aqua;
       }
 
       .widget h2 {
         color: lightblue;
         font-size: 55px;
       }
-      
+
+      .change-color {
+        color: palevioletred;
+      }
+
+      .back {
+        text-decoration: none;
+        color: rgb(61, 0, 61);
+      }
+      .btn-back {
+        padding: 5px 15px;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: rgb(223, 205, 226);
+        border-color: rgb(88, 4, 130);
+      }
     </style>
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
+    <button class="btn-back">
+      <a href="index.html" class="back"><b>Go back</b></a>
+    </button>
 
     <div class="widget">
       <h2>Paleta różowych kolorów tła dla Okti</h2>
       <p>Background color: <span class="color">-</span></p>
-      <button type="button" class="change-color">Change color</button>
+      <button type="button" class="change-color"><b>Change color</b></button>
     </div>
 
     <script src="js/pink_bg.js" type="module"></script>
