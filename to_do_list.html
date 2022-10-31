@@ -22,11 +22,11 @@
       }
 
       .widget button {
-        padding: 10px 20px;
+        padding: 5px 8px;
         font-size: 20px;
         cursor: pointer;
         border-radius: 10px;
-        background-color:greenyellow;
+        background-color: greenyellow;
         border-color: rgb(19, 63, 4);
       }
 
@@ -59,6 +59,20 @@
         color: rgb(19, 63, 4);
         font-weight: 600;
       }
+      
+      .input-list {
+        display: flex;
+        justify-content: center;
+      }
+
+      .input-list input {
+        margin-right: 10px;
+      }
+ 
+      .icon {
+        display: flex;
+        justify-content: center;
+      }
 
       body {
         background-color: rgb(174, 174, 174);
@@ -72,10 +86,14 @@
 
     <div class="widget">
       <h2>My to do list</h2>
-      <input type="text" id="list-input" placeholder="New note" />
-      <button type="button" class="change-color" data-create>
-        <b>Dodaj</b>
-      </button>
+      <div class="input-list">
+        <input type="text" id="list-input" placeholder="New note" />
+        <button type="button" class="change-color" data-create>
+          <svg class="icon" width="30" height="30">
+            <use xlink:href="./icons/icons.svg#icon-enter"></use>
+          </svg>
+        </button>
+      </div>
       <ol id="list" class="list"></ol>
     </div>
 
