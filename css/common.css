@@ -42,3 +42,10 @@ img {
   text-decoration: none;
   color: #f00c93;
 }
+.to-do-list {
+  color: green;
+}
+.to-do-list a {
+  text-decoration: none;
+  color: green;
+}
