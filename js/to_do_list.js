@@ -15,7 +15,7 @@ createList.addEventListener("click", (event) => {
 });
 
 destroyList.addEventListener("click", () => {
-  if (startCreateList.value === "") {
+  if (startCreateList.innerHTML === "") {
     alert("To do list is empty");
   } else {
     startCreateList.innerHTML = "";
