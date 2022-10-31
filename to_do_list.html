@@ -18,6 +18,8 @@
       .widget input {
         border-color: rgb(19, 63, 4);
         border-radius: 10px;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
       }
 
       .create-list {
@@ -27,6 +29,8 @@
         border-radius: 10px;
         background-color: greenyellow;
         border-color: rgb(19, 63, 4);
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
       }
 
       .back {
@@ -42,6 +46,8 @@
         background-color: greenyellow;
         border-color: rgb(19, 63, 4);
         font-weight: 700;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
       }
 
       .list {
@@ -68,6 +74,13 @@
 
       .clear-list {
         margin-top: 40px;
+        background-color: #ffa7b6;
+        color: rgb(92, 38, 38);
+        border-color: rgb(92, 38, 38);
+      }
+
+      .title-span {
+        color: #ffa7b6;
       }
 
       body {
@@ -81,7 +94,10 @@
     </button>
 
     <div class="widget">
-      <h2>My to do list</h2>
+      <h2>
+        My <span class="title-span">to</span> do
+        <span class="title-span">list</span>
+      </h2>
       <div class="input-list">
         <input type="text" id="list-input" placeholder="New note" />
         <button type="button" class="create-list" data-create>
