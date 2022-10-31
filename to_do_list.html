@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random pink background</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <style>
+      .widget {
+        text-align: center;
+      }
+
+      .widget p {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 24px;
+      }
+
+      .widget span {
+        font-family: monospace;
+      }
+
+      .widget button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: rgb(206, 218, 214);
+        border-color: rgb(13, 180, 99);
+      }
+
+      .widget h2 {
+        color: greenyellow;
+        font-size: 55px;
+      }
+
+      .change-color {
+        color: green;
+      }
+      .back {
+        text-decoration: none;
+        color: rgb(19, 63, 4);
+      }
+
+      .btn-back {
+        padding: 5px 15px;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: rgb(132, 234, 137);
+        border-color: rgb(19, 63, 4);
+      }
+
+      .list {
+        list-style-position: inside;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn-back">
+      <a href="index.html" class="back"><b>Go back</b></a>
+    </button>
+
+    <div class="widget">
+      <h2>My to do list</h2>
+      <input type="text" id="list-input" placeholder="New note" />
+      <button type="button" class="change-color" data-create>
+        <b>Dodaj</b>
+      </button>
+      <ol id="list" class="list"></ol>
+    </div>
+
+    <script src="js/to_do_list.js" type="module"></script>
+  </body>
+</html>
