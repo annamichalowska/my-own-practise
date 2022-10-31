@@ -4,9 +4,13 @@ const startCreateList = document.querySelector("#list");
 const destroyList = document.querySelector("button[data-clear]");
 
 createList.addEventListener("click", (event) => {
-  const itemList = document.createElement("li");
-  startCreateList.appendChild(itemList);
-  itemList.textContent = listInput.value;
+  if (listInput.value === "") {
+    alert("Enter new note");
+  } else {
+    const itemList = document.createElement("li");
+    startCreateList.appendChild(itemList);
+    itemList.textContent = listInput.value;
+  }
   listInput.value = "";
 });
 
