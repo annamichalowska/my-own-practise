@@ -21,7 +21,12 @@
         font-family: monospace;
       }
 
-      .widget button {
+      .widget h2 {
+        color: greenyellow;
+        font-size: 55px;
+      }
+
+      .create-list {
         padding: 5px 8px;
         font-size: 20px;
         cursor: pointer;
@@ -30,14 +35,6 @@
         border-color: rgb(19, 63, 4);
       }
 
-      .widget h2 {
-        color: greenyellow;
-        font-size: 55px;
-      }
-
-      .change-color {
-        color: rgb(19, 63, 4);
-      }
       .back {
         text-decoration: none;
         color: rgb(19, 63, 4);
@@ -50,6 +47,7 @@
         border-radius: 50px;
         background-color: greenyellow;
         border-color: rgb(19, 63, 4);
+        font-weight: 700;
       }
 
       .list {
@@ -59,7 +57,7 @@
         color: rgb(19, 63, 4);
         font-weight: 600;
       }
-      
+
       .input-list {
         display: flex;
         justify-content: center;
@@ -68,10 +66,14 @@
       .input-list input {
         margin-right: 10px;
       }
- 
+
       .icon {
         display: flex;
         justify-content: center;
+      }
+
+      .clear-list {
+        margin-top: 40px;
       }
 
       body {
@@ -81,14 +83,14 @@
   </head>
   <body>
     <button class="btn-back">
-      <a href="index.html" class="back"><b>Go back</b></a>
+      <a href="index.html" class="back">Go back</a>
     </button>
 
     <div class="widget">
       <h2>My to do list</h2>
       <div class="input-list">
         <input type="text" id="list-input" placeholder="New note" />
-        <button type="button" class="change-color" data-create>
+        <button type="button" class="create-list" data-create>
           <svg class="icon" width="30" height="30">
             <use xlink:href="./icons/icons.svg#icon-enter"></use>
           </svg>
@@ -96,6 +98,9 @@
       </div>
       <ol id="list" class="list"></ol>
     </div>
+    <button type="button" class="clear-list btn-back" data-clear>
+      Clear list
+    </button>
 
     <script src="js/to_do_list.js" type="module"></script>
   </body>
