@@ -39,8 +39,8 @@ startTimer.addEventListener("click", (event) => {
         placeWork.value +
         "/ Notes: " +
         notesWork.value;
-      //   startCreateWorkList.innerHTML = "";
-      //   placeWork.value = "";
+      placeWork.value = "";
+      notesWork.value = "";
     }
   });
 });
