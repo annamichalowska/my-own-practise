@@ -19,3 +19,4 @@ startTimer.addEventListener("click", (event) => {
     clearInterval(timerVar);
   });
 });
+
