@@ -12,6 +12,10 @@ body {
   line-height: 1.5;
 }
 
+input {
+  padding-left: 10px;
+}
+
 .my-practise {
   display: flex;
   flex-direction: column;
@@ -23,7 +27,7 @@ body {
   text-align: center;
 }
 
-.list {
+.list-main {
   color: #f2cc8f;
   background-color: #81b29a;
   font-size: 40px;
@@ -35,7 +39,7 @@ body {
     0px 2px 1px rgb(0 0 0 / 20%);
 }
 
-.list a {
+.list-main a {
   text-decoration: none;
   color: #f2cc8f;
 }
