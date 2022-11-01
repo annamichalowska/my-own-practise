@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Timer</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Raleway:wght@700&family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .widget {
+        text-align: center;
+      }
+
+      .widget h2 {
+        color: #a69888;
+        font-size: 75px;
+        font-family: "Poor story";
+        font-weight: 800;
+        margin-bottom: 10px;
+        margin-top: 40px;
+        -webkit-text-stroke: 0.1px black;
+      }
+      .widget input {
+        border-color: #fcbfb7;
+        border-radius: 10px;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+          margin-bottom: 5px;
+      }
+
+      .machine-app__btn {
+        padding: 5px 8px;
+        font-size: 20px;
+        font-weight: 600;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: #fcbfb7;
+        border-color: #6b6d76;
+        color: #6b6d76;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+      }
+      .btn-left {
+        margin-bottom: 5px;
+      }
+
+      .back {
+        text-decoration: none;
+        color: #fcbfb7;
+      }
+
+      .btn-back {
+        padding: 5px 15px;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: #6b6d76;
+        border-color: #fcbfb7;
+        font-weight: 700;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+      }
+
+      .list {
+        list-style-position: inside;
+        text-align: left;
+        font-size: 25px;
+        color: rgb(53, 53, 53);
+        font-weight: 600;
+      }
+
+      .machine-app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .machine-app__items {
+        display: flex;
+        flex-direction: column;
+      }
+ 
+      .time-in-work {
+        border: 3px solid #fcbfb7;
+        background-color: #6b6d76;
+        width: 220px;
+        height: 50px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        color: #334e58;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      body {
+        background-color: #334e58;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn-back">
+      <a href="index.html" class="back">Go back</a>
+    </button>
+
+    <div class="widget">
+      <h2>Work Timer</h2>
+      <div class="machine-app">
+        <div>
+          <button type="button" class="machine-app__btn btn-left" data-start>
+            START
+          </button>
+          <button type="button" class="machine-app__btn" data-stop>STOP</button>
+        </div>
+        <div class="machine-app__items">
+          <div class="time-in-work" id="timer"></div>
+          <input type="text" id="list-input" placeholder="Place work" />
+          <input type="text" id="list-input" placeholder="Notes" />
+        </div>
+        <div>
+          <button type="button" class="machine-app__btn" data-finish>
+            FINISH
+          </button>
+        </div>
+      </div>
+      <ol id="list" class="list"></ol>
+    </div>
+
+    <script src="js/work_timer.js" type="module"></script>
+  </body>
+</html>
