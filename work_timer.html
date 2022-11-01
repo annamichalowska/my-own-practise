@@ -31,7 +31,7 @@
         border-radius: 10px;
         box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
           0px 2px 1px rgb(0 0 0 / 20%);
-          margin-bottom: 5px;
+        margin-bottom: 5px;
       }
 
       .machine-app__btn {
@@ -88,11 +88,10 @@
         display: flex;
         flex-direction: column;
       }
- 
+
       .time-in-work {
         border: 3px solid #fcbfb7;
         background-color: #6b6d76;
-        width: 220px;
         height: 50px;
         border-radius: 10px;
         margin-bottom: 5px;
@@ -114,24 +113,23 @@
     <div class="widget">
       <h2>Work Timer</h2>
       <div class="machine-app">
-        <div>
+      
+        <div class="machine-app__items">
+              <div>
           <button type="button" class="machine-app__btn btn-left" data-start>
             START
           </button>
           <button type="button" class="machine-app__btn" data-stop>STOP</button>
-        </div>
-        <div class="machine-app__items">
-          <div class="time-in-work" id="timer"></div>
-          <input type="text" id="list-input" placeholder="Place work" />
-          <input type="text" id="list-input" placeholder="Notes" />
-        </div>
-        <div>
           <button type="button" class="machine-app__btn" data-finish>
             FINISH
           </button>
         </div>
+          <div class="time-in-work" id="timer"></div>
+          <input type="text" id="list-input" placeholder="Place work" />
+          <input type="text" id="list-input" placeholder="Notes" />
+        </div>
+        <div></div>
       </div>
-      <ol id="list" class="list"></ol>
     </div>
 
     <script src="js/work_timer.js" type="module"></script>
