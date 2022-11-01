@@ -41,6 +41,7 @@ startTimer.addEventListener("click", (event) => {
         notesWork.value;
       placeWork.value = "";
       notesWork.value = "";
+      document.getElementById("timer").innerHTML = "";
     }
   });
 });
