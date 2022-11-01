@@ -20,28 +20,24 @@ startTimer.addEventListener("click", (event) => {
   }
   finishTimer.addEventListener("click", (event) => {
     clearInterval(timerVar);
-    if (placeWork.value === "") {
-      alert("Refill place of work");
-    } else {
-      const timeWorkList = document.createElement("li");
-      startCreateWorkList.appendChild(timeWorkList);
-      const now = new Date();
-      timeWorkList.textContent =
-        "Date: " +
-        now.getDate() +
-        "." +
-        (now.getMonth() + 1) +
-        "." +
-        now.getFullYear() +
-        "/ Time work: " +
-        document.getElementById("timer").innerHTML +
-        "/ Place work: " +
-        placeWork.value +
-        "/ Notes: " +
-        notesWork.value;
-      placeWork.value = "";
-      notesWork.value = "";
-      document.getElementById("timer").innerHTML = "";
-    }
+    const timeWorkList = document.createElement("li");
+    startCreateWorkList.appendChild(timeWorkList);
+    const now = new Date();
+    timeWorkList.textContent =
+      "Date: " +
+      now.getDate() +
+      "." +
+      (now.getMonth() + 1) +
+      "." +
+      now.getFullYear() +
+      "/ Time work: " +
+      document.getElementById("timer").innerHTML +
+      "/ Place work: " +
+      placeWork.value +
+      "/ Notes: " +
+      notesWork.value;
+    placeWork.value = "";
+    notesWork.value = "";
+    document.getElementById("timer").innerHTML = "";
   });
 });
