@@ -1,5 +1,8 @@
 const startTimer = document.querySelector("button[data-start]");
-const stopTimer = document.querySelector("button[data-finish]");
+const finishTimer = document.querySelector("button[data-finish]");
+const startCreateWorkList = document.querySelector("#list");
+const placeWork = document.querySelector("input#place-work");
+const notesWork = document.querySelector("input#notes-work");
 
 startTimer.addEventListener("click", (event) => {
   const timerVar = setInterval(countTimer, 1000);
@@ -15,8 +18,29 @@ startTimer.addEventListener("click", (event) => {
     document.getElementById("timer").innerHTML =
       hour + ":" + minute + ":" + seconds;
   }
-  stopTimer.addEventListener("click", (event) => {
+  finishTimer.addEventListener("click", (event) => {
     clearInterval(timerVar);
+    if (placeWork.value === "") {
+      alert("Refill place of work");
+    } else {
+      const timeWorkList = document.createElement("li");
+      startCreateWorkList.appendChild(timeWorkList);
+      const now = new Date();
+      timeWorkList.textContent =
+        "Date: " +
+        now.getDate() +
+        "." +
+        (now.getMonth() + 1) +
+        "." +
+        now.getFullYear() +
+        "/ Time work: " +
+        document.getElementById("timer").innerHTML +
+        "/ Place work: " +
+        placeWork.value +
+        "/ Notes: " +
+        notesWork.value;
+      //   startCreateWorkList.innerHTML = "";
+      //   placeWork.value = "";
+    }
   });
 });
-
