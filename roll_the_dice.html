@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roll The Dice</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <style>
+      body {
+        background-color: #06d6a0;
+      }
+
+      .widget {
+        text-align: center;
+        color: #ef476f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .widget h1 {
+        font-size: 70px;
+      }
+
+      .widget button {
+        padding: 10px 20px;
+        font-size: 30px;
+        cursor: pointer;
+        border-radius: 20px;
+        background-color: #118ab2;
+        border-color: #073b4c;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+      }
+
+      .dice-div {
+        border: 2px solid;
+        border-radius: 20px;
+        background-color: #073b4c;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .roll-btn {
+        color: #ffd166;
+      }
+
+      .back {
+        text-decoration: none;
+        color: #118ab2;
+      }
+
+      .btn-back {
+        padding: 5px 15px;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: #ffd166;
+        border-color: #118ab2;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn-back">
+      <a href="index.html" class="back"><b>Go back</b></a>
+    </button>
+    <div class="widget">
+      <h1>Roll The Dice</h1>
+      <div class="dice-div">
+        <p>
+          Place for dice<br />
+          (project in progress)
+        </p>
+      </div>
+      <button type="button" class="roll-btn"><b>Roll</b></button>
+    </div>
+
+    <script src="js/roll_the_dice.js" type="module"></script>
+  </body>
+</html>
