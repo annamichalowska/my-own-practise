@@ -11,15 +11,14 @@ function getRandomDate() {
 console.log(getRandomDate());
 
 startDraw.addEventListener("click", (event) => {
-  const dateValue = getRandomDate();
-  console.log(dateValue);
-  const datesList = document.createElement("li");
-  startCreateDatesList.appendChild(datesList);
-  datesList.textContent =
-    "Date: " +
-    dateValue.getDate() +
-    "." +
-    (dateValue.getMonth() + 1) +
-    "." +
-    dateValue.getFullYear();
+  for (let i = 1; i <= quantityDates.value; i++) {
+    const dateValue = getRandomDate();
+    console.log(dateValue);
+    const datesList = document.createElement("li");
+    startCreateDatesList.appendChild(datesList);
+    datesList.textContent = `Date ${i}:
+      ${dateValue.getDate()}.${
+      dateValue.getMonth() + 1
+    }.${dateValue.getFullYear()}`;
+  }
 });
