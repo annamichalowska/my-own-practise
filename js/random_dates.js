@@ -8,8 +8,6 @@ function getRandomDate() {
   return new Date(timestamp);
 }
 
-console.log(getRandomDate());
-
 startDraw.addEventListener("click", (event) => {
   var RegExpression = /^[a-zA-Z\s]*$/;
   if (RegExpression.test(quantityDates.value)) {
