@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Timer</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .widget {
+        text-align: center;
+      }
+
+      .widget h2 {
+        color: #a9aca9;
+        font-size: 80px;
+        font-family: "Anton";
+        font-weight: 400;
+        margin-bottom: 10px;
+        margin-top: 40px;
+      }
+      .widget input {
+        border-color: #60495a;
+        border-radius: 10px;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+        margin-bottom: 5px;
+        font-family: "Anton";
+        font-size: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .machine-app__btn {
+        padding: 5px 8px;
+        font-size: 20px;
+        font-family: "Anton";
+        font-weight: 400;
+        width: 200px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: #bfc3ba;
+        border-color: #2f2235;
+        color: #2f2235;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+      }
+      .btn-left {
+        margin-bottom: 5px;
+      }
+
+      .back {
+        text-decoration: none;
+        color: #bfc3ba;
+      }
+
+      .btn-back {
+        padding: 5px 15px;
+        font-size: 15px;
+        font-family: "Anton";
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: #2f2235;
+        border-color: #bfc3ba;
+        font-weight: 500;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+      }
+
+      .list {
+        list-style-position: inside;
+        text-align: left;
+        font-size: 15px;
+        color: #bfc3ba;
+        font-weight: 600;
+      }
+
+      .machine-app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .machine-app__items {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .time-in-work {
+        border: 3px solid #bfc3ba;
+        background-color: #2f2235;
+        height: 50px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        color: #2f2235;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      body {
+        background-color: #60495a;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn-back">
+      <a href="index.html" class="back">Go back</a>
+    </button>
+
+    <div class="widget">
+      <h2>Random Dates</h2>
+      <div class="machine-app">
+        <div class="machine-app__items">
+          <input type="text" id="quantity-dates" placeholder="Dates quantity" />
+          <button type="button" class="machine-app__btn" data-draw>
+            DATES DRAW
+          </button>
+          <ul id="list" class="list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/random_dates.js" type="module"></script>
+  </body>
+</html>
