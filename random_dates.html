@@ -4,18 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work Timer</title>
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Random Dates</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Nerko+One&display=swap"
       rel="stylesheet"
     />
+
     <style>
       .widget {
         text-align: center;
@@ -23,9 +19,9 @@
 
       .widget h2 {
         color: #a9aca9;
-        font-size: 80px;
-        font-family: "Anton";
-        font-weight: 400;
+        font-size: 70px;
+        font-family: "Nerko One";
+        font-weight: 200;
         margin-bottom: 10px;
         margin-top: 40px;
       }
@@ -39,14 +35,15 @@
         font-size: 15px;
         padding-top: 10px;
         padding-bottom: 10px;
+        padding-left: 5px;
       }
 
       .machine-app__btn {
         padding: 5px 8px;
-        font-size: 20px;
+        font-size: 15px;
         font-family: "Anton";
         font-weight: 400;
-        width: 200px;
+        width: 100px;
         height: 40px;
         cursor: pointer;
         border-radius: 10px;
@@ -83,7 +80,9 @@
         text-align: left;
         font-size: 15px;
         color: #bfc3ba;
-        font-weight: 600;
+        font-weight: 50;
+        font-family: "Anton";
+        padding-left: 0;
       }
 
       .machine-app {
@@ -96,6 +95,7 @@
       .machine-app__items {
         display: flex;
         flex-direction: column;
+        align-items: center;
       }
 
       .time-in-work {
@@ -120,7 +120,7 @@
     </button>
 
     <div class="widget">
-      <h2>Random Dates</h2>
+      <h2>RANDOM DATES</h2>
       <div class="machine-app">
         <div class="machine-app__items">
           <input type="text" id="quantity-dates" placeholder="Dates quantity" />
