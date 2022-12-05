@@ -25,7 +25,8 @@ startDraw.addEventListener("click", (event) => {
   var RegExpression = /^[a-zA-Z\s]*$/;
   const myYear = Number(yearData.value);
   console.log(myYear);
-
+  const datesTable = [];
+  const datesTableOnlyNubmer = [];
   if (RegExpression.test(quantityDates.value)) {
     alert("It is not a number");
   }
@@ -36,16 +37,38 @@ startDraw.addEventListener("click", (event) => {
     for (let i = 1; i <= quantityDates.value; i++) {
       const dateValue = randomDate(new Date(), new Date(myYear, 11, 31));
       console.log(dateValue);
-      const datesList = document.createElement("li");
-      startCreateDatesList.appendChild(datesList);
-      datesList.textContent = `Date ${i}:
-      ${dateValue.getDate()}.${
-        dateValue.getMonth() + 1
-      }.${dateValue.getFullYear()}`;
+      datesTable.push(dateValue);
+      console.log(dateValue.getTime());
+      datesTableOnlyNubmer.push(dateValue.getTime());
+
+      // const datesList = document.createElement("li");
+      // startCreateDatesList.appendChild(datesList);
+      // datesList.textContent = `Date ${i}:
+      // ${dateValue.getDate()}.${
+      //   dateValue.getMonth() + 1
+      // }.${dateValue.getFullYear()}`;
       startDraw.disabled = true;
       resetData.disabled = false;
     }
+    datesTable.sort();
+    console.log(datesTable);
+    datesTableOnlyNubmer.sort();
+    console.log(datesTableOnlyNubmer);
+
+    for (let i = 0; i < datesTableOnlyNubmer.length; i++) {
+      const dateDate = datesTableOnlyNubmer[i];
+      console.log(dateDate);
+      const dacisko = dateDate.toTimeString();
+      console.log(dacisko);
+      const datesList = document.createElement("li");
+      startCreateDatesList.appendChild(datesList);
+      datesList.textContent = `Date ${i}:
+      ${dateDate.getDate()}.${
+        dateDate.getMonth() + 1
+      }.${dateDate.getFullYear()}`;
+    }
   }
+
   if (myYear > actualYear) {
     for (let i = 1; i <= quantityDates.value; i++) {
       const dateValue = randomDate(new Date(), new Date(myYear + 1, 0, 1));
