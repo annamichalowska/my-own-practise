@@ -4,6 +4,8 @@ const startCreateDatesList = document.querySelector("#list");
 const resetData = document.querySelector("button[data-reset");
 const yearData = document.querySelector("input#year");
 
+resetData.disabled = true;
+
 function getRandomDate() {
   const maxDate = Date.now();
   const timestamp = Math.floor(Math.random() * maxDate);
@@ -40,6 +42,8 @@ startDraw.addEventListener("click", (event) => {
       ${dateValue.getDate()}.${
         dateValue.getMonth() + 1
       }.${dateValue.getFullYear()}`;
+      startDraw.disabled = true;
+      resetData.disabled = false;
     }
   }
   if (myYear > actualYear) {
@@ -52,10 +56,14 @@ startDraw.addEventListener("click", (event) => {
       ${dateValue.getDate()}.${
         dateValue.getMonth() + 1
       }.${dateValue.getFullYear()}`;
+      startDraw.disabled = true;
+      resetData.disabled = false;
     }
   }
 });
 
 resetData.addEventListener("click", (event) => {
   startCreateDatesList.innerHTML = "";
+  startDraw.disabled = false;
+  resetData.disabled = true;
 });
