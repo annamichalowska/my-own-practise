@@ -40,29 +40,20 @@ startDraw.addEventListener("click", (event) => {
       datesTable.push(dateValue);
       console.log(dateValue.getTime());
       datesTableOnlyNubmer.push(dateValue.getTime());
-
-      // const datesList = document.createElement("li");
-      // startCreateDatesList.appendChild(datesList);
-      // datesList.textContent = `Date ${i}:
-      // ${dateValue.getDate()}.${
-      //   dateValue.getMonth() + 1
-      // }.${dateValue.getFullYear()}`;
       startDraw.disabled = true;
       resetData.disabled = false;
     }
-    datesTable.sort();
-    console.log(datesTable);
-    datesTableOnlyNubmer.sort();
-    console.log(datesTableOnlyNubmer);
 
-    for (let i = 0; i < datesTableOnlyNubmer.length; i++) {
-      const dateDate = datesTableOnlyNubmer[i];
+    datesTable.sort((a, b) => a.getTime() - b.getTime());
+    console.log(datesTable);
+
+    for (let i = 0; i < datesTable.length; i++) {
+      const dateDate = datesTable[i];
       console.log(dateDate);
-      const dacisko = dateDate.toTimeString();
-      console.log(dacisko);
+
       const datesList = document.createElement("li");
       startCreateDatesList.appendChild(datesList);
-      datesList.textContent = `Date ${i}:
+      datesList.textContent = `Date ${i + 1}:
       ${dateDate.getDate()}.${
         dateDate.getMonth() + 1
       }.${dateDate.getFullYear()}`;
@@ -73,14 +64,25 @@ startDraw.addEventListener("click", (event) => {
     for (let i = 1; i <= quantityDates.value; i++) {
       const dateValue = randomDate(new Date(), new Date(myYear + 1, 0, 1));
       console.log(dateValue);
-      const datesList = document.createElement("li");
-      startCreateDatesList.appendChild(datesList);
-      datesList.textContent = `Date ${i}:
-      ${dateValue.getDate()}.${
-        dateValue.getMonth() + 1
-      }.${dateValue.getFullYear()}`;
+      datesTable.push(dateValue);
+      console.log(dateValue.getTime());
+      datesTableOnlyNubmer.push(dateValue.getTime());
       startDraw.disabled = true;
       resetData.disabled = false;
+    }
+    datesTable.sort((a, b) => a.getTime() - b.getTime());
+    console.log(datesTable);
+
+    for (let i = 0; i < quantityDates.value; i++) {
+      const dateDate = datesTable[i];
+      console.log(dateDate);
+
+      const datesList = document.createElement("li");
+      startCreateDatesList.appendChild(datesList);
+      datesList.textContent = `Date ${i + 1}:
+      ${dateDate.getDate()}.${
+        dateDate.getMonth() + 1
+      }.${dateDate.getFullYear()}`;
     }
   }
 });
